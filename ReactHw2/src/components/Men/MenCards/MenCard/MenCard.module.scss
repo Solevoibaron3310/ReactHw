@@ -1,0 +1,67 @@
+.Card {
+    position: relative;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+
+    .img {
+        display: block;
+        background-color: black;
+        border-radius: 10px;
+        width: 100%;
+    }
+    .add-to-fav {
+        display: block;
+        background-color: green;
+        width: 32px;
+        height: 32px;
+        top: 26px;
+        left: 20px;
+    }
+
+    .cardsTxt {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 33px;
+        margin-top: 30px;
+
+        .productName {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-family: Causten;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 19.2px;
+            text-align: left;
+            color: #3C4242;
+
+            .brand {
+                font-family: Causten;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 16.8px;
+                text-align: left;
+                color: #807D7E;
+            }
+        }
+
+        .product-cost {
+            display: block;
+            background-color: #F6F6F6;
+            border: none;
+            border-radius: 10px;
+            width: 82px;
+            height: 37px;
+            padding: 10px 16px 10px 16px;
+            
+            font-family: Causten;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 16.8px;
+            text-align: center;
+            color: #3C4242;
+        }
+    }
+}

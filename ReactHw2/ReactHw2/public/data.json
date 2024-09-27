@@ -1,0 +1,123 @@
+[
+    {
+     "id": "1",
+        "name": "T-shirt",
+        "cost": "400$",
+        "img": "/images/Rectangle 20.png",
+        "brand": "Jhanvi’s  Brand",
+        "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+        {
+          "id": "2",
+        "name": "T-shirt",
+        "cost": "70$",
+        "img": "./images/Rectangle 21.png",
+        "brand": "AS’s  Brand",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+        {
+          "id": "3",
+        "name": "T-shirt",
+        "cost": "52$",
+        "img": "./images/Rectangle 22.png",
+        "brand": "MM’s  Brand",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+        {
+          "id": "4",
+        "name": "T-shirt",
+        "cost": "70$",
+        "img": "./images/Rectangle 23.png",
+        "brand": "Nike’s  Brand",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+       {
+          "id": "5",
+        "name": "T-shirt",
+        "cost": "50$",
+        "img": "./images/Rectangle 24.png",
+        "brand": "H&M",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+        {
+          "id": "6",
+        "name": "T-shirt",
+        "cost": "120$",
+        "img": "./images/Rectangle 26.png",
+        "brand": "Puma",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+        {
+          "id": "7",
+        "name": "T-shirt",
+        "cost": "75$",
+        "img": "./images/Rectangle 27.png",
+        "brand": "Lacosta",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+      {
+          "id": "8",
+        "name": "T-shirt",
+        "cost": "200$",
+        "img": "./images/Rectangle 21.png",
+        "brand": "Jhanvi’s  Brand",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+     {
+   "id": "9",
+   "name": "T-shirt",
+   "cost": "2000$",
+   "img": "./images/Rectangle 22.png",
+   "brand": "Amiri",
+    "article": "10",
+   "color": "blue",
+    "isFav": "false"
+},
+{
+     "id": "10",
+     "name": "T-shirt",
+     "cost": "2000$",
+     "img": "./images/Rectangle 22.png",
+     "brand": "Amiri",
+      "article": "10",
+     "color": "blue",
+      "isFav": "false"
+  },
+  {
+     "id": "11",
+     "name": "T-shirt",
+     "cost": "2000$",
+     "img": "./images/Rectangle 22.png",
+     "brand": "Amiri",
+      "article": "10",
+     "color": "blue",
+      "isFav": "false"
+  },
+  {
+     "id": "12",
+   "name": "T-shirt",
+   "cost": "2000$",
+   "img": "./images/Rectangle 23.png",
+   "brand": "Levise",
+    "article": "10",
+   "color": "blue",
+    "isFav": "false"
+}
+
+]

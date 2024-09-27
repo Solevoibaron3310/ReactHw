@@ -1,0 +1,19 @@
+.Cards-Wrapper {
+    width: 1240px;
+    margin-left: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 50px;
+ 
+    h1 {
+        font-family: Core Sans C;
+        font-size: 34px;
+        font-weight: 600;
+        line-height: 33.5px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #3C4242;
+        border-left: 6px solid  #8A33FD;
+    }
+}

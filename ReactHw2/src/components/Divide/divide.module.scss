@@ -1,0 +1,60 @@
+.section {
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    background-color: #3C4242;
+
+    h3 {
+        font-family: Core Sans C;
+        font-size: 50px;
+        font-weight: 800;
+        line-height: 49.1px;
+        text-align: center;
+        color: white;
+        margin-bottom: 25px;
+        margin-top: 43px;
+        margin-bottom: 25px;
+    }
+
+    .parag {
+        font-family: Causten;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 26.4px;
+        text-align: center;
+        color: white;
+        margin-top: 0;
+        margin-bottom: 67px;
+
+        .count {
+            font-family: Causten;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 26.4px;
+            text-align: center;
+            color: #FBD103;
+            margin-bottom: 67px;
+        }
+    }
+
+    .brandWrapper {
+        width: 986px;
+        height: 85px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .brand {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 177px;
+            height: 85px;
+            border-radius: 12px;
+            background-color: white;
+        }
+    }
+}

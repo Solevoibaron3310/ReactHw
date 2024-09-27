@@ -1,0 +1,82 @@
+[
+    {
+        "name": "T-shirt",
+        "cost": "2000euro",
+        "img": "./images/Reactangle 20",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+        {
+        "name": "T-shirt",
+        "cost": "2000euro",
+        "img": "./images/Reactangle 20",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+        {
+        "name": "T-shirt",
+        "cost": "2000euro",
+        "img": "./images/Reactangle 20",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+        {
+        "name": "T-shirt",
+        "cost": "2000euro",
+        "img": "./images/Reactangle 20",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+       {
+        "name": "T-shirt",
+        "cost": "2000euro",
+        "img": "./images/Reactangle 20",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+        {
+        "name": "T-shirt",
+        "cost": "2000euro",
+        "img": "./images/Reactangle 20",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+        {
+        "name": "T-shirt",
+        "cost": "2000euro",
+        "img": "./images/Reactangle 20",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+      {
+        "name": "T-shirt",
+        "cost": "2000euro",
+        "img": "./images/Reactangle 20",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+       {
+        "name": "T-shirt",
+        "cost": "2000euro",
+        "img": "./images/Reactangle 20",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    },
+       {
+        "name": "T-shirt",
+        "cost": "2000euro",
+        "img": "./images/Reactangle 20",
+         "article": "10",
+        "color": "blue",
+         "isFav": "false"
+    }
+]

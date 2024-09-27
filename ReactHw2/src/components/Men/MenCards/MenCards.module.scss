@@ -1,0 +1,9 @@
+.Cards-Wrapper {
+    width: 1240px;
+    height: 952px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 50px;
+    border: 1px solid black;
+}
