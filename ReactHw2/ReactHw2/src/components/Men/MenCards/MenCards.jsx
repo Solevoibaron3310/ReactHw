@@ -38,7 +38,8 @@ const MenCards = ({ label }) => {
             cost={card.cost}
             srcFav={card.addToFav}  
             item={card}  
-            onFavClick={addToFavorites} 
+            onFavClick={addToFavorites}
+            inCard={card.inCard} 
           />
         ))}
       </div>

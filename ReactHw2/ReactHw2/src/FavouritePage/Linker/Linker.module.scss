@@ -1,0 +1,26 @@
+.LinksWrapper {
+    width: 142px;
+    height: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    .unactive {
+        font-family: Causten;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.6px;
+        text-align: left;
+        color: #807D7E;
+    }
+
+    .active {
+        font-family: Causten;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21.6px;
+        text-align: left;
+        color: #3C4242;        
+    }
+}

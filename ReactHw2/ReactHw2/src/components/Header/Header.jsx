@@ -4,6 +4,7 @@ import styles from './Header.module.scss';
 import Logo from "./Logo/Logo";
 import HeaderButton from "./HeaderButton/HeaderButton";
 import FavBtn from "./HeaderFav/HeaderFav.jsx";
+import Card from "./ShopCard/ShopCard.jsx";
 
 const Header = ({ logoSrc, logoAlt, buttons }) => {
   return (
@@ -23,6 +24,7 @@ const Header = ({ logoSrc, logoAlt, buttons }) => {
           />
         ))}
         <FavBtn src="images/heart.png" />
+        <Card src="images/shopping cart.png"/>
       </nav>
     </header>
   );

@@ -1,0 +1,59 @@
+.divWrapper {
+    width: 482px;
+    height: 91px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: 120px;
+
+    .linkWrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 175px;
+        height: 22px;
+        margin-bottom: 30px;
+
+        .unactiveLink {
+            font-family: Causten;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.6px;
+            text-align: left;
+            color:  #807D7E;
+            cursor: pointer;
+        }
+
+        .activeLink {
+            font-family: Causten;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21.6px;
+            text-align: left;
+            color: #3C4242;
+            cursor: pointer;
+        }
+    }
+
+    .sectionMainTxt {
+        font-family: Causten;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.8px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #807D7E;
+        margin: 2.5px;
+
+        .secondaryTxt {
+            font-family: Causten;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 16.8px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            color: #8A33FD;
+            margin: 0;
+        }
+    }
+}

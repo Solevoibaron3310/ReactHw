@@ -1,8 +1,8 @@
 import './App.module.scss';
-import Header from './components/Header/Header.jsx';
-import MenCards from './components/Men/MenCards/MenCards.jsx';
-import Footer from './components/Footer/Footer.jsx';
-import DivideSection from './components/Divide/divide.jsx'
+import { Route, Routes } from 'react-router';
+import FavoriteListPage from './FavouritePage/FavouritePage.jsx';
+import HomePage from './HomePage/HomePage.jsx';
+import BuyPage from './BuyPage/BuyPage.jsx';
 
 function App() {
   const handleClick1 = () => alert('Button 1 clicked');
@@ -21,19 +21,11 @@ function App() {
 
   return (
     <>
-      <Header 
-        logoSrc="/images/Logo (1).png"
-        logoAlt="Check my img"
-        buttons={buttons}
-      />
-
-<MenCards label="Category for Men"/> 
-
-      <DivideSection/>
-
-      <MenCards label=" " /> 
-      
-      <Footer/>
+      <Routes>
+      <Route path='/' element={<HomePage/>}/>
+        <Route path='FavouritePage' element={<FavoriteListPage/>}/>
+        <Route path="buy" element={<BuyPage />} />
+      </Routes>
       
     </>
   );

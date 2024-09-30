@@ -1,0 +1,152 @@
+.paymentSection {
+    width: 1200px;
+    height: 338px;
+    background-color: #F6F6F6;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 70px;
+    
+
+    .disconts {
+        position: relative;
+        width: 375px;
+        height: 222px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 99px;
+        
+
+        .divTitle {
+            font-family: Causten;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 28.8px;
+            text-align: left;
+            color: #3C4242;
+            margin: 0;
+        }
+
+        .instructions {
+            font-family: Causten;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 19.2px;
+            text-align: left;
+            color: #807D7E;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+
+        .inpTxt {
+            width: 375px;
+            border-radius: 4px;
+            border: 1px solid  #BEBCBD;
+            height: 43px;
+        }
+
+        .applyCoupon {
+            width: 161px;
+            height: 43px;
+            left: 214px;
+            gap: 0px;
+            border: none;
+            border-radius: 8px;
+            opacity: 0px;
+            background-color: #8A33FD;
+            color: white;
+            position: absolute;
+            top: 98px;
+            left: 215px;
+            cursor: pointer;
+        }
+
+        .continue {
+            width: Fixed (232px)px;
+            height:43px;   
+            padding: 12px 20px 12px 20px;
+            gap: 12px;
+            border-radius: 8px 0px 0px 0px;
+            border: 1px solid #BEBCBD;
+            background-color: white;
+            border-radius: 8px;
+
+            font-family: Causten;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 19.2px;
+            text-align: center;
+            color: #3C4242;
+            margin-top: 37px;
+            cursor: pointer;
+        }
+    }
+
+    .bill {
+        width: 465px;
+        height: 100%;
+        background-color: #F3F3F3;
+        margin-right: 100px;
+        border: 1px solid  black;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        .fullCost {
+            display: flex;
+            align-items: center;
+            width: 283px;
+            height: 133px;
+            
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-row-gap: 15px;
+            grid-column-gap: 90px;
+            
+
+
+            .subTotal {
+                font-family: Causten;
+                font-size: 22px;
+                font-weight: 500;
+                line-height: 26.4px;
+                letter-spacing: 0.02em;
+                text-align: left;
+                color: #3C4242;
+            }   
+
+            .grandTotal {
+                font-family: Causten;
+                font-size: 22px;
+                font-weight: 700;
+                line-height: 26.4px;
+                letter-spacing: 0.02em;
+                text-align: left;
+                color: #3C4242;
+            }
+        }
+
+        .checkout {
+            width:  232px;
+            height: 46px;
+            padding: 12px 33px 12px 33px;
+            gap: 12px;
+            border-radius: 8px ;
+            border: none;
+            background-color: #8A33FD;
+
+
+            font-family: Causten;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 21.6px;
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+        }
+    }
+}

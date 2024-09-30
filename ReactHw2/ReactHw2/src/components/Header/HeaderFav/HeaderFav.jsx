@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import styles from "./HeaderFav.module.scss";
 import { FavoriteContext } from "../../../FavContext/FavContext.jsx"; 
+import { Link } from "react-router-dom";
 
 const FavBtn = ({ src }) => {
   const { favorites } = useContext(FavoriteContext); 
@@ -9,7 +10,7 @@ const FavBtn = ({ src }) => {
 
   return (
     <>
-      <img className={styles.img} src={src} alt="Favorites" />
+      <Link to="/FavouritePage"><img className={styles.img} src={src} alt="Favorites" /></Link>
       <span className={styles.counter}>{favorites.length}</span>
     </>
   );

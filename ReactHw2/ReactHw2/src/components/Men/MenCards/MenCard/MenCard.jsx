@@ -1,9 +1,8 @@
-
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./MenCard.module.scss";
 
-const Card = ({ img, alt, name, cost, brand, srcFav, onFavClick, item }) => {
+const Card = ({ img, alt, name, cost, brand, srcFav, onFavClick, item, inCard }) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const handleFavoriteClick = () => {

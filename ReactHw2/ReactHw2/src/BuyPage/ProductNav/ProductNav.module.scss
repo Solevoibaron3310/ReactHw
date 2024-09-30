@@ -1,0 +1,44 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 70px;
+    width: 1200px;
+    height: 76px;
+    background-color: #3C4242;
+    margin-bottom: 70px;
+   margin-left: 120px;
+    .navTxt {
+        font-family: Causten;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 21.6px;
+        text-align: center;
+        color: white;
+    }
+
+    .fullInf {
+        width: 633px;
+        display: flex;
+        flex-direction: row;
+        margin-left: 430px;
+        height: 22px;
+
+        .navTxt {
+            font-family: Causten;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 21.6px;
+            text-align: center;
+            color: white;
+            margin-right: 120px;
+        }
+
+        // .navTxt:nth-last-child(1) {
+        //     margin-left: 200px;
+        // }
+    }
+
+
+}

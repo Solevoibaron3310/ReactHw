@@ -1,18 +1,25 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
 export const FavoriteContext = createContext();
 
 export const FavoriteProvider = ({ children }) => {
-  const [favorites, setFavorites] = useState([]);
+  const [favorites, setFavorites] = useState(() => {
+    
+    const savedFavorites = localStorage.getItem('favorites');
+    return savedFavorites ? JSON.parse(savedFavorites) : [];
+  });
   const [isModalOpen, setIsModalOpen] = useState(false); 
 
   const addToFavorites = (item) => {
     setFavorites((prevFavs) => {
-      if (prevFavs.find(fav => fav.id === item.id)) {
-        return prevFavs.filter(fav => fav.id !== item.id); 
-      } else {
-        return [...prevFavs, { ...item, isFav: true }]; 
-      }
+      const updatedFavorites = prevFavs.find(fav => fav.id === item.id)
+        ? prevFavs.filter(fav => fav.id !== item.id) 
+        : [...prevFavs, { ...item, isFav: true, inCard: false }]; 
+
+      
+      localStorage.setItem('favorites', JSON.stringify(updatedFavorites));
+
+      return updatedFavorites; 
     });
     openModal(); 
   };
@@ -28,12 +35,11 @@ export const FavoriteProvider = ({ children }) => {
   return (
     <FavoriteContext.Provider value={{ favorites, addToFavorites, isModalOpen, closeModal }}>
       {children}
-      {isModalOpen && <Modal closeModal={closeModal} />} {/* Условный рендеринг модального окна */}
-      {isModalOpen && <div className="modal-overlay" onClick={closeModal} />} {/* Затемнённый фон */}
+      {isModalOpen && <Modal closeModal={closeModal} />} 
+      {isModalOpen && <div className="modal-overlay" onClick={closeModal} />} 
     </FavoriteContext.Provider>
   );
 };
-
 
 const Modal = ({ closeModal }) => {
   return (

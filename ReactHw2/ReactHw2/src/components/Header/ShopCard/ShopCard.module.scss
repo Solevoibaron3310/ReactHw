@@ -1,6 +1,9 @@
-.img {
+.cart {
+    display: block;
     width: 30px;
     height: 30px;
+    background-color: grey;
+    align-items: center;
 }
 
 .counter {
@@ -12,5 +15,5 @@
     color: #807D7E;
     position: absolute;
     top: 30px;
-    right: 270px;
+    right: 195px;
 }

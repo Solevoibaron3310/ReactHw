@@ -7,7 +7,8 @@
         "brand": "Jhanvi’s  Brand",
         "article": "10",
         "color": "blue",
-         "isFav": "false"
+         "isFav": "false",
+         "inCard": "false"
     },
         {
           "id": "2",
@@ -17,7 +18,8 @@
         "brand": "AS’s  Brand",
          "article": "10",
         "color": "blue",
-         "isFav": "false"
+         "isFav": "false",
+         "inCard": "false"
     },
         {
           "id": "3",
@@ -27,7 +29,8 @@
         "brand": "MM’s  Brand",
          "article": "10",
         "color": "blue",
-         "isFav": "false"
+         "isFav": "false",
+         "inCard": "false"
     },
         {
           "id": "4",
@@ -37,7 +40,8 @@
         "brand": "Nike’s  Brand",
          "article": "10",
         "color": "blue",
-         "isFav": "false"
+         "isFav": "false",
+         "inCard": "false"
     },
        {
           "id": "5",
@@ -47,7 +51,8 @@
         "brand": "H&M",
          "article": "10",
         "color": "blue",
-         "isFav": "false"
+         "isFav": "false",
+         "inCard": "false"
     },
         {
           "id": "6",
@@ -57,7 +62,8 @@
         "brand": "Puma",
          "article": "10",
         "color": "blue",
-         "isFav": "false"
+         "isFav": "false",
+         "inCard": "false"
     },
         {
           "id": "7",
@@ -67,7 +73,8 @@
         "brand": "Lacosta",
          "article": "10",
         "color": "blue",
-         "isFav": "false"
+         "isFav": "false",
+         "inCard": "false"
     },
       {
           "id": "8",
@@ -77,7 +84,8 @@
         "brand": "Jhanvi’s  Brand",
          "article": "10",
         "color": "blue",
-         "isFav": "false"
+         "isFav": "false",
+         "inCard": "false"
     },
      {
    "id": "9",
@@ -87,7 +95,8 @@
    "brand": "Amiri",
     "article": "10",
    "color": "blue",
-    "isFav": "false"
+    "isFav": "false",
+    "inCard": "false"
 },
 {
      "id": "10",
@@ -97,7 +106,8 @@
      "brand": "Amiri",
       "article": "10",
      "color": "blue",
-      "isFav": "false"
+      "isFav": "false",
+      "inCard": "false"
   },
   {
      "id": "11",
@@ -107,7 +117,8 @@
      "brand": "Amiri",
       "article": "10",
      "color": "blue",
-      "isFav": "false"
+      "isFav": "false",
+      "inCard": "false"
   },
   {
      "id": "12",
@@ -117,7 +128,8 @@
    "brand": "Levise",
     "article": "10",
    "color": "blue",
-    "isFav": "false"
+    "isFav": "false",
+    "inCard": "false"
 }
 
 ]

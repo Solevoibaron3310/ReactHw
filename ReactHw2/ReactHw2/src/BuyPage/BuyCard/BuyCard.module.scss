@@ -1,0 +1,95 @@
+.buyCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #BEBCBD;
+    width: 1200px;
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    margin-left: 70px;
+
+    .img {
+        width: 105px;
+        height: 120px;
+        margin-right: 20px;
+    }
+
+    .fullInfo {
+        width: 216px;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-right: 264px;
+        margin-bottom: 50px;
+
+        .mainTxt {
+            font-family: Causten;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 21.6px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            margin: 0;
+        }
+
+        .secondaryTxt {
+            font-family: Causten;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 16.8px;
+            text-align: left;
+            color: #807D7E;
+            margin: 0;
+        }
+    }
+    
+
+}
+
+ .buyCard:nth-last-child(1) {
+    margin-bottom: 0;
+ }
+
+.countWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .money {
+        font-family: Causten;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21.6px;
+        text-align: left;
+        color: #3C4242;
+    }
+
+    .money:nth-child(1) {
+        margin-left: 70px;
+    }
+
+    .shipping {
+        font-family: Causten;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21.6px;
+        letter-spacing: 0.02em;
+        text-align: left;
+        color: #BEBCBD;
+    }
+
+    .delBtn {
+        border: none;
+        background-color: white;
+        cursor: pointer;
+        margin-left: 30px;
+        margin-right: 50px;
+    }
+    
+}
+
+
