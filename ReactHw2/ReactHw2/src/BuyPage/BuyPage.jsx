@@ -1,18 +1,24 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import Header from "../components/Header/Header.jsx";
 import Footer from "../components/Footer/Footer.jsx";
-import { FavoriteContext } from '../FavContext/FavContext.jsx';
+// import { FavoriteContext } from '../FavContext/FavContext.jsx';
 import BuyCard from './BuyCard/BuyCard.jsx';
-import { BuyContext } from '../BuyContext/BuyContext.jsx';
+// import { BuyContext } from '../BuyContext/BuyContext.jsx';
 import Divider from "./BuyDivider/BuyDivider.jsx";
 import Navbar from "./ProductNav/ProdauctNav.jsx";
 import PaymentWrapper from "./Payment/Payment.jsx";
-import  styles from "./BuyPage.module.scss"
+import  styles from "./BuyPage.module.scss";
+import { useSelector } from "react-redux";
+import { removeFromCart } from "../store/slices/shopCart.slice.js";
 
 
 const BuyPage = () => {
-    const { favorites } = useContext(FavoriteContext);
-    const { buy, addToBuy, removeFromBuy } = useContext(BuyContext);
+    const cart = useSelector((state) => state.cart.cart); // Правильное получение корзины из состояния Redux
+    console.log(cart)
+
+    const removeFromBuy = () => {
+    
+    } 
 
  
     const handleClick1 = () => alert('Button 1 clicked');
@@ -41,13 +47,13 @@ const BuyPage = () => {
         
         <Navbar/>
             <div className={styles.buyPage}>
-                {buy.length > 0 ? (
-                    buy.map((item) => (
+                {cart.length > 0 ? (
+                    cart.map((item) => (
                         <BuyCard 
                         key={item.id} 
                         item={item} 
-                        addToBuy={addToBuy} 
-                        removeFromBuy={removeFromBuy}
+                        
+                        // removeFromBuy={removeFromBuy}
                         />
                     ))
                 ) : (
@@ -56,10 +62,10 @@ const BuyPage = () => {
             </div>
 
             <div className={styles.PaymentSection}>
-                {buy.length > 0 ? (
+                {cart.length > 0 ? (
                     
                         <PaymentWrapper
-                        items={buy}
+                        items={cart}
                         />
                    
                 ) : (

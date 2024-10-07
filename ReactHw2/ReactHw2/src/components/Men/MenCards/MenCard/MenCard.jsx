@@ -40,7 +40,7 @@ Card.propTypes = {
   brand: PropTypes.string.isRequired,
   srcFav: PropTypes.string,
   onFavClick: PropTypes.func.isRequired,
-  item: PropTypes.object.isRequired,  
+  // item: PropTypes.object.isRequired,  
 };
 
 Card.defaultProps = {

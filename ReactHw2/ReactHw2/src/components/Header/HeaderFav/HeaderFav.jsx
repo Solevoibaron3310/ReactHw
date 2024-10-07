@@ -1,23 +1,21 @@
-import React, { useContext } from "react";
-import PropTypes from "prop-types";
-import styles from "./HeaderFav.module.scss";
-import { FavoriteContext } from "../../../FavContext/FavContext.jsx"; 
+import React from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from "react-router-dom";
+import styles from './HeaderFav.module.scss'
 
-const FavBtn = ({ src }) => {
-  const { favorites } = useContext(FavoriteContext); 
-  console.log(favorites)
+
+const HeaderFav = () => {
+  const favourites = useSelector((state) => state.favourites.favourites); // Получаем избранные элементы из состояния
 
   return (
     <>
-      <Link to="/FavouritePage"><img className={styles.img} src={src} alt="Favorites" /></Link>
-      <span className={styles.counter}>{favorites.length}</span>
-    </>
+    <Link to="/FavouritePage">
+      <img  src="./images/heart.png" alt="" />
+    </Link>
+      <span className={styles.counter}>{favourites.length}</span>
+      
+   </>
   );
 };
 
-FavBtn.propTypes = {
-  src: PropTypes.string.isRequired, 
-};
-
-export default FavBtn; 
+export default HeaderFav;

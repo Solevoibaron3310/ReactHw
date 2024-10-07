@@ -1,20 +1,19 @@
 import React from 'react';
 import styles from './BuyCard.module.scss';
+import { useSelector, useDispatch } from 'react-redux'; 
+import { addToCart, removeFromCart } from '../../store/slices/shopCart.slice';
 
-const BuyCard = ({ item, addToBuy, removeFromBuy }) => {
-    
-    const handleRemoveClick = () => {
+const BuyCard = ({item}) => {
+    const dispatch = useDispatch();
 
-        removeFromBuy(item)
-        try {
-            removeFromBuy(item.id); 
-            console.log(item.id)
-        } catch (error) {
-            console.log("You havent deleated your crad")
-        }
-        
-    
+    const hendleCartClick = () => {
+        dispatch(addToCart(item))
     };
+
+    const handleRemoveFromCart = () => {
+        dispatch(removeFromCart(item.id));
+      };     
+    
 
     return (
             <div className={styles.buyCard}>
@@ -28,10 +27,10 @@ const BuyCard = ({ item, addToBuy, removeFromBuy }) => {
                     <p className={styles.money}>{item.cost}</p>
                     <p className={styles.shipping}>FREE</p>
                     <p className={styles.money}>{item.cost}</p>
-                    <button className={styles.delBtn} onClick={handleRemoveClick}>X</button>
+                    <button className={styles.delBtn} onClick={handleRemoveFromCart}>X</button>
                 </div>
             </div>
     );
-};
 
+};
 export default BuyCard;

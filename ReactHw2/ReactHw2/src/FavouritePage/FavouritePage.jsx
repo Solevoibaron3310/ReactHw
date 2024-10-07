@@ -1,16 +1,22 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Header from '../components/Header/Header.jsx';
-import Footer from '../components/Footer/Footer.jsx';
-import { FavoriteContext } from '../FavContext/FavContext.jsx'; 
-import { BuyContext } from '../BuyContext/BuyContext.jsx'; 
+import Footer from '../components/Footer/Footer.jsx'; 
+// import { BuyContext } from '../BuyContext/BuyContext.jsx'; 
 import FavoriteList from './FavouriteList/FavouriteList.jsx';
 import Linker from './Linker/Linker.jsx';
+import { useSelector } from 'react-redux';
+
+
 
 const FavoriteListPage = () => {
-  const { favorites, addToFavorites } = useContext(FavoriteContext);
-  const { addToBuy } = useContext(BuyContext);
+  // const { addToBuy } = useContext(BuyContext);
 
-  console.log(favorites);
+ 
+    const favourites = useSelector((state) => state.favourites.favourites);
+    console.log(favourites)
+
+
+
 
   const buttons = [
     { label: 'Shop', onClick: () => alert('Shop clicked'), type: 'button' },
@@ -30,7 +36,7 @@ const FavoriteListPage = () => {
 
       <Linker/>
 
-      <FavoriteList label="Wishlist" addToBuy={addToBuy} />
+      <FavoriteList label="Wishlist" />
       <Footer/>
     </>
   );

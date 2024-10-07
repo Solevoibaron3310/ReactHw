@@ -1,16 +1,25 @@
 import React, { useState } from 'react';
 import styles from './FavouriteCard.module.scss';
+import { useSelector, useDispatch } from 'react-redux'; 
+import { addToFavourites } from '../../../store/slices/favourite.slice';
+import { addToCart } from '../../../store/slices/shopCart.slice';
 
 const FavoriteCard = ({ item, addToFavorites, addToBuy }) => { 
+    const dispatch = useDispatch(); 
 
+    const handleFavouriteClick = () => {
+        dispatch(addToFavourites(item)); // Передаем объект в слайс
+    };
   
 
     const handleBuyClick = () => {
-            addToBuy(item); 
+           dispatch(addToCart(item));
+           console.log(item)
     };
+    
     return (
         <div className={styles.favoriteCard}>
-            <button className={styles.delbtn} onClick={() => addToFavorites(item)}>
+            <button className={styles.delbtn} onClick={() => handleFavouriteClick(item)}>
                 {item.isFav ? 'X' : 'Добавить в избранное'}
             </button>
             <img className={styles.img} src={item.img} alt="" />

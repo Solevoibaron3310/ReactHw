@@ -1,11 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./ShopCard.module.scss";
-import { BuyContext } from '../../../BuyContext/BuyContext.jsx'
+import { useSelector } from "react-redux";
+
 
 const Card = ({src}) => {
-    const { buy } = useContext(BuyContext)
+    const buy = useSelector((state) => state.cart.cart)
 
     return (
         <>

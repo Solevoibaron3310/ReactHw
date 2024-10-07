@@ -1,9 +1,12 @@
 import React from "react";
-import styles from "./Payment.module.scss"
+import styles from "./Payment.module.scss";
+import { useDispatch } from "react-redux";
 
 
 const PaymentWrapper = ({items}) => {
+    const dispatch = useDispatch();
 
+console.log(dispatch)
 const subTotal = items.reduce((total, item) => total + parseInt(item.cost, 10), 0);
 
 

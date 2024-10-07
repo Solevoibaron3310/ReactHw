@@ -1,39 +1,17 @@
-// import { StrictMode } from 'react'
-// import { createRoot } from 'react-dom/client'
-// import App from './App.jsx'
-// import { FavoriteProvider } from './FavContext/FavContext.jsx';
-// import './index.module.scss'
-// import { BrowserRouter } from 'react-router-dom';
-// import { BuyProvider } from './BuyContext/BuyContext.jsx';
-
-// createRoot(document.getElementById('root')).render(
-//   <StrictMode>
-//     <FavoriteProvider>
-//         <BuyProvider>
-//               <BrowserRouter>
-//                   <App />  
-//               </BrowserRouter>
-//         </BuyProvider>
-//     </FavoriteProvider>
-//   </StrictMode>,
-// )
-
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App.jsx';
-import { FavoriteProvider } from './FavContext/FavContext.jsx';
-import { BuyProvider } from './BuyContext/BuyContext.jsx';
 import './index.module.scss';
 import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store/index.js';
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <FavoriteProvider>
-            <BuyProvider>
-                <BrowserRouter>
-                    <App />
-                </BrowserRouter>
-            </BuyProvider>
-        </FavoriteProvider>
+        <Provider store={store}> 
+                    <BrowserRouter>
+                        <App />
+                    </BrowserRouter>
+        </Provider>  
     </StrictMode>
 );
