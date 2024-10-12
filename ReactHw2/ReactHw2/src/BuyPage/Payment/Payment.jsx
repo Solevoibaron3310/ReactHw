@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Payment.module.scss";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 
 const PaymentWrapper = ({items}) => {
@@ -40,8 +41,9 @@ const subTotal = items.reduce((total, item) => total + parseInt(item.cost, 10), 
                     <span className={styles.grandTotal}>{subTotal}</span>
                     
                 </div>
-
-                <button className={styles.checkout}>Proceed To Checkout</button>
+                <Link to="/checkout">
+                    <button className={styles.checkout}>Proceed To Checkout</button>
+                </Link>
             </div>
         </div>
     )

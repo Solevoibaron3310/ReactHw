@@ -1,0 +1,44 @@
+.pageLabel {
+    font-family: Roboto;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 100;
+    line-height: 33.5px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #3C4242;
+    padding-left: 21px;
+   border-left: 6px solid #8A33FD;
+   border-radius: 3px;
+   margin-left: 120px;
+}
+
+
+.buyContainer {
+        width: 400px;
+        position: absolute;
+        top: 300px;
+        right: 300px;
+
+        .label {
+            font-family: Roboto;
+            font-size: 24px;
+            font-style: italic;
+            font-weight: 100;
+            line-height: 28.13px;
+            text-align: left;
+            color: #3C4242;
+        }
+    
+        .total {
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 21.09px;
+            letter-spacing: 0.02em;
+            text-align: left;
+            color: #3C4242;
+        }
+    }
+
+

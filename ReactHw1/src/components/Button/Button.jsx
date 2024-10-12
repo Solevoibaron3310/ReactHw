@@ -10,7 +10,7 @@ const Button1 = (props) => {
         onClick={onClick}>
                 {children}
                 
-                </button>
+        </button>
     )
 }
 

@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router';
 import FavoriteListPage from './FavouritePage/FavouritePage.jsx';
 import HomePage from './HomePage/HomePage.jsx';
 import BuyPage from './BuyPage/BuyPage.jsx';
+import CheckoutPage from "./CheckoutPage/CheckoutPage.jsx"
 
 function App() {
   const handleClick1 = () => alert('Button 1 clicked');
@@ -22,9 +23,11 @@ function App() {
   return (
     <>
       <Routes>
-      <Route path='/' element={<HomePage/>}/>
+        <Route path='/' element={<HomePage/>}/>
         <Route path='FavouritePage' element={<FavoriteListPage/>}/>
         <Route path="buy" element={<BuyPage />} />
+        <Route path="checkout" element={<CheckoutPage />} />
+
       </Routes>
       
     </>
