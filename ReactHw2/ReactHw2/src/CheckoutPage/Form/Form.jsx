@@ -4,16 +4,29 @@ import { Formik, Form } from "formik";
 import { initialValues, schemas } from "./helper";
 import { Input } from "./Input/Input";
 import  { Button }  from "./Button/Button";
+import { useDispatch } from 'react-redux'; 
+import { removeAllFromCart } from '../../store/slices/shopCart.slice';
 
-const CheckoutForm = () => {
+const CheckoutForm = ({item}) => {
+    const dispatch = useDispatch();
+
+    function ConfirmForm() {
+        console.log('Success')
+        const buyArr = JSON.parse(window.localStorage.getItem('cart'))
+        console.log(buyArr)
+        buyArr.splice(0, buyArr.length)
+        console.log(buyArr)
+        dispatch(removeAllFromCart(item))
+    }
+
     return (
         <>
             <Formik
                 initialValues={initialValues}
                 validationSchema={schemas.custom}
-                onSubmit={() => console.log('Success')}
+                onSubmit={(values) => { ConfirmForm(); console.log('Form Data: ', values); }}
             >
-                {({ errors, touched }) => (
+                {({ errors, touched, values }) => (
                     <Form className={styles.form}>
 
                         <Input

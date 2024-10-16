@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    cart: JSON.parse(localStorage.getItem('cart')) || [], // Загружаем корзину из LocalStorage
+    cart: JSON.parse(localStorage.getItem('cart')) || [], 
 };
 
 const cartSlice = createSlice({
@@ -13,26 +13,31 @@ const cartSlice = createSlice({
 
 
             if (itemIndex >= 0) {
-                // Если элемент уже есть в корзине, удаляем его
+                
                 state.cart = state.cart.filter(item => item.id !== action.payload.id);
             } else {
-                // Если элемента нет, добавляем его в корзину
+                
                 state.cart.push({...action.payload, inCard: true});
             }
 
-            // Обновляем LocalStorage после изменения корзины
+           
             localStorage.setItem('cart', JSON.stringify(state.cart));
         },
         removeFromCart: (state, action) => {
-            // Удаление элемента из корзины по ID
-            state.cart = state.cart.filter(item => item.id !== action.payload); // Используем action.payload напрямую как ID
+            
+            state.cart = state.cart.filter(item => item.id !== action.payload); 
 
-            // Обновляем LocalStorage после удаления
+            
             localStorage.setItem('cart', JSON.stringify(state.cart));
         },
+        removeAllFromCart: (state, action) => {
+            state.cart = []
+            console.log("Bought Items:", state.cart);
+            localStorage.setItem('cart', JSON.stringify(state.cart))
+        }
     },
 });
 
-export const { addToCart, removeFromCart } = cartSlice.actions;
+export const { addToCart, removeFromCart, removeAllFromCart } = cartSlice.actions;
 
 export default cartSlice.reducer;

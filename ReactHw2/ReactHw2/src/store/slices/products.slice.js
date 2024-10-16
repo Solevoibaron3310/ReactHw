@@ -1,27 +1,26 @@
 // src/store/slices/productsSlice.js
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-// Начальное состояние
 const initialState = {
   products: [],
   status: 'idle',
   error: null,
 };
 
-// Асинхронный thunk для загрузки продуктов
+
 export const fetchProducts = createAsyncThunk(
   'products/fetchProducts',
   async () => {
-    const response = await fetch('/data.json'); // Замените на ваш API или локальный файл
+    const response = await fetch('/data.json'); 
     if (!response.ok) {
       throw new Error('Failed to fetch products');
     }
     const data = await response.json();
-    return data; // Возвращаем загруженные данные
+    return data; 
   }
 );
 
-// Создание слайса
+
 const productsSlice = createSlice({
   name: 'products',
   initialState,
@@ -33,7 +32,7 @@ const productsSlice = createSlice({
       })
       .addCase(fetchProducts.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.products = action.payload; // Сохраняем загруженные продукты
+        state.products = action.payload; 
       })
       .addCase(fetchProducts.rejected, (state, action) => {
         state.status = 'failed';
@@ -42,5 +41,4 @@ const productsSlice = createSlice({
   },
 });
 
-// Экспортируем редюсер
 export default productsSlice.reducer;

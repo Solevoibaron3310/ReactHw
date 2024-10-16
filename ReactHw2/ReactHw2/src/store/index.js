@@ -1,7 +1,7 @@
 // src/store/index.js
 import { configureStore } from '@reduxjs/toolkit';
-import productsReducer from './slices/products.slice'; // ваш слайс для продуктов
-import favouriteReducer, { addToFavourites } from './slices/favourite.slice'; // ваш слайс для избранного
+import productsReducer from './slices/products.slice';
+import favouriteReducer, { addToFavourites } from './slices/favourite.slice';
 import cartReducer, { addToCart } from './slices/shopCart.slice'
 
 const store = configureStore({
@@ -12,7 +12,6 @@ const store = configureStore({
   },
 });
 
-// Загрузка избранных элементов из LocalStorage
 const savedFavourites = localStorage.getItem('favourites');
 if (savedFavourites) {
   store.dispatch(addToFavourites(JSON.parse(savedFavourites)));

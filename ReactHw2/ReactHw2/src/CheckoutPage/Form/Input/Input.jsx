@@ -10,7 +10,7 @@ import { Field, ErrorMessage as Error } from "formik";
             <div id="helloWOlrd" className={styles.inpWrapper}>
                 <label htmlFor={id}>{label}</label>
                 <Field name={name} id={id} placeholder={placeholder}/>
-                <Error name={name}>{(error) => <span>{error}</span>}</Error>
+                <Error name={name}>{(error) => <span className={styles.error}>{error}</span>}</Error>
             </div>
         </>
     )
