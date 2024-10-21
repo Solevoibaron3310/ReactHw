@@ -1,14 +1,14 @@
 {
     "presets": [
-        "babel/preset-react",
+        "@babel/preset-react",
         "@babel/preset-env"
     ],
 
     "env": { 
         "test":{
             "presets": [
-            "babel/preset-react",
-            "@babel/preset-env"
+            "@babel/preset-react",
+            "@babel/preset-env" 
             ],
             "plugins": [
                 "@babel/plugin-syntax-dynamic-import"

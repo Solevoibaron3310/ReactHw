@@ -5,14 +5,16 @@ import Footer from '../components/Footer/Footer.jsx';
 import DivideSection from '../components/Divide/divide.jsx';
 import { useDispatch, useSelector } from 'react-redux'; 
 import { fetchProducts } from '../store/slices/products.slice.js';
+import { ViewProvider } from '../ViewContext/ViewContext.jsx'; 
+import SwitchToggle from '../components/SwitchToggle/SwitchToggle.jsx'
 
 const HomePage = () => {
-  const dispatch = useDispatch(); // Корректный вызов useDispatch
+  const dispatch = useDispatch();
   const { products, status, error } = useSelector(state => state.products);
 
   useEffect(() => {
     if (status === 'idle') {
-      dispatch(fetchProducts()); // Загружаем товары с сервера
+      dispatch(fetchProducts());
     }
   }, [status, dispatch]);
 
@@ -39,19 +41,21 @@ const HomePage = () => {
   ];
 
   return (
-    <>
+    <ViewProvider>
       <Header 
         logoSrc="/images/Logo (1).png"
         logoAlt="Check my img"
         buttons={buttons}
       />
 
-      <MenCards label="Category for Men" />
+      <SwitchToggle/>
+
+      <MenCards label="Category for Men" customClass='customClass'/>
 
       <DivideSection />
 
       <Footer />
-    </>
+    </ViewProvider>
   );
 };
 

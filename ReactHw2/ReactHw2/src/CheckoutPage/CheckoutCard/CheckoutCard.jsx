@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Checkout.module.scss';
 import { useSelector, useDispatch } from 'react-redux'; 
-import { removeAllFromCart } from '../../store/slices/shopCart.slice';
+import { addToCart, removeFromCart } from '../../store/slices/shopCart.slice';
 
 export const CheckoutCard = ({item}) => {
     const dispatch = useDispatch();

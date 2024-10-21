@@ -3,12 +3,9 @@ import styles from './BuyCard.module.scss';
 import { useSelector, useDispatch } from 'react-redux'; 
 import { addToCart, removeFromCart } from '../../store/slices/shopCart.slice';
 
+
 const BuyCard = ({item}) => {
     const dispatch = useDispatch();
-
-    const hendleCartClick = () => {
-        dispatch(addToCart(item))
-    };
 
     const handleRemoveFromCart = () => {
         dispatch(removeFromCart(item.id));

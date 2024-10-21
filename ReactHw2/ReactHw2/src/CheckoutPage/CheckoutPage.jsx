@@ -8,7 +8,7 @@ import styles from "./CheckoutPage.module.scss";
 import { CheckoutCard } from "./CheckoutCard/CheckoutCard.jsx";
 
 const CheckoutPage = () => {
-    const cart = useSelector((state) => state.cart.cart); // Правильное получение корзины из состояния Redux
+    const cart = useSelector((state) => state.cart.cart); 
     console.log(cart)
 
     const handleClick1 = () => alert('Button 1 clicked');
